@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: -200px -500px no-repeat url(/images/bg-pattern-top.svg), 600px 600px no-repeat url(/images/bg-pattern-bottom.svg);
+    background-color: var(--dark-cyan);
+}
+
+/* Card */
+.card {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+/* Heading */
+.card__head-img {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* User */
+.card__user {
+    position: relative;
+    transform: translateY(-50px);
+}
+
+.card__user-img {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card__user-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card__user-name {
+    color: var(--desaturated-blue);
+    font-size: 18px;
+}
+
+.card__user-age {
+    color: var(--dark-gray);
+    font-weight: lighter;
+}
+
+.card__user-location {
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+
+/* Infos */
+.card__infos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--dark-gray);
+    padding: 1.5rem 3rem;
+    text-align: center;
+    color: var(--desaturated-blue);
+}
+
+.card__infos h4 {
+    font-size: 18px;
+}
+
+.card__infos p {
+    font-size: 14px;
+    color: var(--dark-gray);
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    color: var(--desaturated-blue);
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+    body {
+        background: -600px -500px no-repeat url(/images/bg-pattern-top.svg), 200px 500px no-repeat url(/images/bg-pattern-bottom.svg);
+        background-color: var(--dark-cyan);
+    }
+   
+    .card{
+        width: 280px;
+    }
+    .card__user-img, .card__user-img img{
+        width: 100%;
+        height: 100%;
+    }
+}
